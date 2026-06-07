@@ -1,9 +1,12 @@
 public class SubArrays {
     public static void SubArrays(int arr[]) {
+        int maxSum = Integer.MIN_VALUE;
+        int currSum = 0;
         for(int start = 0;start<arr.length;start++) {
             for(int end = start;end<arr.length;end++) {
                 for(int k = start;k<=end;k++) {
                     System.out.print( arr[k]);
+                    currSum+=arr[k];
                 }
                 System.out.println();
             }
